@@ -1,0 +1,8 @@
+:root{
+  --text-color:black;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1455px;
+  padding: 0 15px;
+}
