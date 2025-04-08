@@ -1,0 +1,32 @@
+$breakpoint-xxs: 319px; // Mobile nhỏ
+$breakpoint-xs: 479px;
+$breakpoint-sm: 576px; // Mobile
+$breakpoint-md: 767px; // Tablet
+$breakpoint-lg: 992px; // Laptop
+$breakpoint-xl: 1024px; // Desktop
+$breakpoint-xxl: 1280px;
+$breakpoint-xxxl: 1440px;
+$breakpoint-xxxxl: 1540px;
+
+$color-description: #7d7d7d;
+$color-border: #e3e3e3;
+
+// Mixin for media queries (combine for efficiency)
+// Mixin for media queries
+@mixin respond-to($min: null, $max: null) {
+  @if $min ==null and $max !=null {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else if $min !=null and $max ==null {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $min !=null and $max !=null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
